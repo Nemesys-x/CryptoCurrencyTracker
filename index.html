@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Portfolio Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Axios per CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Chart.js per CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts für Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="crypto-portfolio-container">
+      <h1>Crypto Portfolio Tracker</h1>
+      <div class="crypto-portfolio-inputs">
+        <input
+          id="cryptoInput"
+          type="text"
+          placeholder="Coin (z.B. bitcoin, dogecoin)"
+        />
+        <input id="amountInput" type="number" placeholder="Menge" />
+        <button id="addButton">Hinzufügen</button>
+      </div>
+      <div id="card">
+        <div id="cardContent">
+          <table id="portfolioTable">
+            <thead>
+              <tr>
+                <th>Coin</th>
+                <th>Menge</th>
+                <th>Wert (USD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Portfolio-Einträge werden hier eingefügt -->
+            </tbody>
+          </table>
+          <!-- Diagramm für Statistiken -->
+          <div class="chart-container">
+            <canvas id="portfolioChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
